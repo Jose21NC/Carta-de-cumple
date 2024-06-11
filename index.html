@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz cumple mi jhanita <3</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.4.0/tsparticles.confetti.bundle.min.js"></script>		
+</head>
+<body>
+
+	<audio autoplay loop volume="0.1"> <!-- Se agrega musica de fondo --> 
+		<source src="/media/cancion.mp3" type="audio/mpeg"></audio>
+
+	  
+<div class="card">
+		<div class="imgBox">
+			<div class="bark"></div>
+			<img src="/media/portada.png"> <!-- Se cambio la imagen a almacenamiento local -->
+		</div>
+		<div class="details">
+			<h4 class="color1">Que tengas un muy</h2> <!-- Se agrego una diferenciacion a los colores-->
+			<h4 class="color2 margin">Feliz Cumpleaños!</h3>
+				<!-- Se cambio <p> por <br> para evitar posibles errores -->
+    <div class="mensajes" style="padding-left: 10px;" style="font-size: 15px;"> 
+		Hoy es un dia muy especial por que celebramos un año mas de tu bonita existencia,
+		 me emocina mucho saber<br>que mi chiquita con cada dia esta creciendo y aunque
+		para esta vez no estemos juntos te deseo lo mas lindo<br>y feli en tu dia. Te mando
+		muchos besotes y abrazos y espero pronto poder darte tu regalo.
+    </div>
+
+			<br><p class="text-right">Felicidades</p>
+			<p class="text-right">Con amor, de tu josecito <3</p>
+		</div>
+	</div>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			function launchConfetti() {
+				confetti("tsparticles", {
+					// Ángulo en el cual se lanza el confeti, en grados
+					angle: 90,
+					// Número de partículas de confeti a lanzar
+					count: 2,
+					// Posición inicial del confeti en la página
+					position: {
+						// Posición x en la página, con 0 siendo el borde izquierdo y 100 siendo el borde derecho
+						x: Math.random() * 100,
+						// Posición y en la página, con 0 siendo el borde superior y 100 siendo el borde inferior
+						y: 0
+					},
+					// Qué tan lejos del centro puede ir el confeti, en grados
+					spread: 300,
+					// Qué tan rápido comenzará a moverse el confeti, en píxeles
+					startVelocity: 10,
+					// Qué tan rápido perderá velocidad el confeti (entre 0 y 1)
+					decay: 0.90,
+					// Qué tan rápido son atraídas hacia abajo las partículas (gravedad)
+					gravity: 1,
+					// Qué tanto se desplazarán las partículas de confeti hacia un lado
+					drift: 0,
+					// Cuántas veces se moverá el confeti antes de desaparecer
+					ticks: 200,
+					// Colores del confeti en formato HEX
+					colors: ["#ffffff", "#ff0000", "#B883BB"],
+					// Formas del confeti
+					shapes: ["square", "circle", "heart", "diamonds"],
+					// Factor de escala para cada partícula de confeti
+					scalar: 1,
+					// Índice Z del confeti (para asegurarse de que esté en la parte superior)
+					zIndex: 100,
+					// Desactiva el confeti para usuarios que prefieren reducir el movimiento
+					disableForReducedMotion: true,
+				});
+			}
+	
+			// Lanzar confeti inmediatamente y repetir cada 100 milisegundos
+			launchConfetti();
+			setInterval(launchConfetti, 100);
+		});
+	</script>
+	  
+
+</body>
+</html>
