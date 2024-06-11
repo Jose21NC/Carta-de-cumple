@@ -21,6 +21,30 @@ h4 {
 .color1{color:#F4ACB9}
 .color2{color:#B883BB}
 
+button {
+    font-family: 'Amatic SC', cursive !important;
+    background-color: #B883BB;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #923B68;
+}
+
+/* Configuración para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    button {
+        padding: 15px 30px; /* Ajusta el padding para hacer el botón más grande */
+        font-size: 24px; /* Ajusta el tamaño de fuente */
+    }
+}
+
 
 .card {
 	color: #013243;
@@ -125,3 +149,5 @@ h4 {
 	margin-right: 30px; /* Se cambio la visualizacion */
 	margin-top: -3px;
 }
+
+

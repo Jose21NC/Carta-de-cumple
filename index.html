@@ -8,8 +8,19 @@
 </head>
 <body>
 
-	<audio autoplay loop volume="1"> <!-- Se agrega musica de fondo --> 
-		<source src="media/cancion.mp3" type="audio/mpeg"></audio>
+	<audio id="miAudio" loop volume="0.5">
+    <source src="media/cancion.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="reproducirAudio()">Reproducir</button>
+
+<script>
+    function reproducirAudio() {
+        var audio = document.getElementById("miAudio");
+        audio.play();
+    }
+</script>
+	
 
 	  
 <div class="card">
@@ -33,6 +44,8 @@
 		</div>
 	</div>
 	<script>
+
+		
 		document.addEventListener("DOMContentLoaded", function() {
 			function launchConfetti() {
 				confetti("tsparticles", {
